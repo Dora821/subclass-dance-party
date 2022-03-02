@@ -29,9 +29,26 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+    window.dancers.push(dancer);
     // $('body').append(dancer.$image);
   });
+  $('.addLineUpButton').on('click', function(event) {
+  //   $('.dancerChar').css({
+  //     "display": "flex",
+  //     "justify-items": "left",
+  //     'justify-content': 'left'
+  //   });
+  // });
+    // $(this).next('.dancer').toggleClass('paused');
+    window.dancers.forEach(function(item) {
+      // console.log('item ' + item);
+      item.lineUp();
+    });
+  });
 
+  $('.title').on('click', function(event) {
+    $('dancer').toggle();
+  });
 
 });
 

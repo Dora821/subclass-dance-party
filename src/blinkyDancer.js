@@ -2,7 +2,9 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   // var blinkyDancer = new makeDancer(top, left, timeBetweenSteps);
   makeDancer.call(this, ...arguments);
   // this.$node = $('<span class="BlinkyDancer"></span>');
-  this.$node = $('<img class="BlinkyDancer" src="lib/blinkyDancer.jpg"/>');
+  // this.$node = $('<span class="> <img class="BlinkyDancer" src="lib/blinkyDancer.jpg"/> </span>');
+  // this.$node = $('<span class=dancer"> <img src="lib/blinkyDancer.jpg"/> </span>');
+  this.$node.prepend('<img src="lib/blinkyDancer.jpg" />').addClass("BlinkyDancer");
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
   // so we must keep a copy of the old version of this function
 };
